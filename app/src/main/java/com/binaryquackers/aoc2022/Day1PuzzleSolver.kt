@@ -3,7 +3,7 @@ package com.binaryquackers.aoc2022
 import java.nio.charset.StandardCharsets
 
 class Day1PuzzleSolver: PuzzleSolver() {
-    fun solve(fname: String): LongArray {
+    private fun solve(fname: String): LongArray {
         var data = java.io.BufferedReader(
             activity.assets!!.open(fname)
                 .reader(StandardCharsets.UTF_8))
@@ -22,16 +22,24 @@ class Day1PuzzleSolver: PuzzleSolver() {
         var topElvesSum = elvesSorted[0] + elvesSorted[1] + elvesSorted[2]
         return elvesSorted
     }
-    override fun onTest() {
-        var solution = solve("Day1TestInput.txt")
+    private fun onPart1(fname: String) {
+        var solution = solve(fname)
         message = "Max Calories\n${solution[0]}"
     }
-    override fun onPart1() {
-        var solution = solve("Day1Input.txt")
-        message = "Max Calories\n${solution[0]}"
-    }
-    override fun onPart2() {
-        var solution = solve("Day1Input.txt")
+    private fun onPart2(fname: String) {
+        var solution = solve(fname)
         message = "Max 3 Calories Total\n${solution[0]+solution[1]+solution[2]}"
+    }
+    override fun onPart1Test() {
+        onPart1("Day1TestInput.txt")
+    }
+    override fun onPart1Solution() {
+        onPart1("Day1Input.txt")
+    }
+    override fun onPart2Test() {
+        onPart1("Day1TestInput.txt")
+    }
+    override fun onPart2Solution() {
+        onPart1("Day1Input.txt")
     }
 }

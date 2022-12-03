@@ -5,7 +5,8 @@ import android.app.Activity
 abstract class PuzzleSolver {
     var message = ""
     lateinit var activity: Activity
-    abstract fun onTest()
-    abstract fun onPart1()
-    abstract fun onPart2()
+    abstract fun onPart1Test()
+    abstract fun onPart1Solution()
+    abstract fun onPart2Test()
+    abstract fun onPart2Solution()
 }

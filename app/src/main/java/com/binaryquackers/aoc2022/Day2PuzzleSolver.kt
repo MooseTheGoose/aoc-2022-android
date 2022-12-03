@@ -3,12 +3,12 @@ package com.binaryquackers.aoc2022
 import java.nio.charset.StandardCharsets
 
 class Day2PuzzleSolver: PuzzleSolver() {
-    enum class Result {
+    private enum class Result {
         Lose,
         Draw,
         Win;
     }
-    enum class Choice {
+    private enum class Choice {
         Rock,
         Paper,
         Scissors;
@@ -44,7 +44,7 @@ class Day2PuzzleSolver: PuzzleSolver() {
             return matrix[this.idx() * 3 + idx]
         }
     }
-    fun solve(fname: String, inverse: Boolean): Int {
+    private fun solve(fname: String, inverse: Boolean): Int {
         var reader = java.io.BufferedReader(
         activity.assets!!.open(fname).reader(StandardCharsets.UTF_8))
         var score = 0
@@ -82,13 +82,22 @@ class Day2PuzzleSolver: PuzzleSolver() {
         }
         return score
     }
-    override fun onTest() {
-        message = "Strategy Score: ${solve("Day2TestInput.txt", true)}"
+    private fun onPart1(fname: String) {
+        message = "Strategy Score: ${solve(fname, false)}"
     }
-    override fun onPart1() {
-        message = "Strategy Score: ${solve("Day2Input.txt", false)}"
+    private fun onPart2(fname: String) {
+        message = "Strategy Score: ${solve(fname, true)}"
     }
-    override fun onPart2() {
-        message = "Strategy Score: ${solve("Day2Input.txt", true)}"
+    override fun onPart1Test() {
+       onPart1("Day2TestInput.txt")
+    }
+    override fun onPart1Solution() {
+        onPart1("Day2Input.txt")
+    }
+    override fun onPart2Test() {
+        onPart2("Day2TestInput.txt")
+    }
+    override fun onPart2Solution() {
+        onPart2("Day2Input.txt")
     }
 }

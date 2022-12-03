@@ -12,45 +12,76 @@
         android:layout_height="97dp"
         android:textAlignment="center"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@id/TestButton"
+        app:layout_constraintBottom_toTopOf="@id/Part1TestButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/TestButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/test"
+    <LinearLayout
+        android:id="@+id/Part1LinearLayout"
+        android:layout_width="144dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/AnswerText" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499">
 
-    <Button
-        android:id="@+id/Part1Button"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="196dp"
-        android:text="@string/part1"
+        <TextView
+            android:id="@+id/Part1Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/part1"
+            android:textAlignment="center"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/Part1TestButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/test" />
+
+        <Button
+            android:id="@+id/Part1SolutionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="@string/solution" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Part2LinearLayout"
+        android:layout_width="157dp"
+        android:layout_height="146dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toEndOf="@+id/TestButton"
-        app:layout_constraintTop_toBottomOf="@+id/AnswerText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/Part1LinearLayout"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/Part2Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/part2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Part1Button"
-        app:layout_constraintTop_toBottomOf="@+id/AnswerText"
-        app:layout_constraintVertical_bias="0.503" />
+        <TextView
+            android:id="@+id/Part2Title"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:text="@string/part2"
+            android:textAlignment="center"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/Part2TestButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/test" />
+
+        <Button
+            android:id="@+id/Part2SolutionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/solution" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
