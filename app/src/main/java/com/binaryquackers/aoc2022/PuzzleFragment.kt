@@ -15,7 +15,7 @@ import java.nio.charset.StandardCharsets
 class PuzzleFragment: Fragment() {
 
     private var _binding: FragmentPuzzleBinding? = null
-    private var daySolver = Day3PuzzleSolver()
+    private var daySolver = Day5PuzzleSolver()
 
     // This property is only valid between onCreateView and
     // onDestroyView.

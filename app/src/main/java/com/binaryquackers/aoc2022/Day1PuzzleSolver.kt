@@ -19,7 +19,6 @@ class Day1PuzzleSolver: PuzzleSolver() {
         }
         elfCalories.sortDescending()
         var elvesSorted = elfCalories.toLongArray()
-        var topElvesSum = elvesSorted[0] + elvesSorted[1] + elvesSorted[2]
         return elvesSorted
     }
     private fun onPart1(fname: String) {
